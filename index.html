@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hola Mundo</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+input {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 1em;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00c6ff;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #0072ff;
+}
+#saludo {
+  margin-top: 30px;
+  font-size: 1.5em;
+}
+</style>
+</head>
+<body>
+<h1>¡Hola Mundo con JavaScript!</h1>
+<div>
+  <input type="text" id="nombre" placeholder="Escribe tu nombre">
+  <button onclick="saludar()">Saludar</button>
+</div>
+<p id="saludo"></p>
+<script>
+function saludar() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const saludo = document.getElementById("saludo");
+  if (nombre) {
+    saludo.textContent = "Hola " + nombre + "!, encantado de conocerte. Yo me llamo Valentín Cano";
+  } else {
+    saludo.textContent = "Por favor, escribe tu nombre.";
+  }
+}
+</script>
+</body>
+</html>
